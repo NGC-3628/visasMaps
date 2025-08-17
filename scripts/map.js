@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //load data through JSON
     Promise.all([
-        fetch('visa_data.json').then(response => response.json()),
-        fetch('countries.geojson').then(response => response.json())
+        fetch('scripts/visa_data.json').then(response => response.json()),
+        fetch('scripts/custom.geo.json').then(response => response.json())
     ]).then(([visa, geojson]) => {
         visaData = visa;
 
